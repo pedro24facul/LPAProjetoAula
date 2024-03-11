@@ -14,11 +14,12 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self):
-        pygame.mixer_music.load('./assets/Menu.wav')
-        pygame.mixer_music.play(-1)
+        # pygame.mixer_music.load('./assets/Menu.wav')
+        # pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, "Ardest",(255, 128, 0), (WIN_WIDTH/2, 70))
+            self.menu_text(50, "Dash", (255, 128, 0), (WIN_WIDTH / 2, 70))
             pygame.display.flip()
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
