@@ -7,7 +7,7 @@ class Entity(ABC):
     def __init__(self, name: str, position: tuple):
         self.name = name
         self.surf: Surface = pygame.image.load('./assets/level_img/' + name + '.png')
-        self.rect = self.surf.get_rect(left=position[0], top=position[0])
+        self.rect = self.surf.get_rect(left=position[0], top=position[1])
         self.speed = 0
 
     @abstractmethod

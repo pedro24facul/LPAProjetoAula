@@ -6,3 +6,11 @@ COLOR_YELLOW = (255, 255, 128)
 COLOR_WHITE = (255, 255, 255)
 
 MENU_OPTION_LIST = ('PLAY GAME 1P', 'PLAY GAME 2P - COOPERATIVE', 'PLAY GAME 2P - COMPETITIVE', 'EXIT GAME')
+
+ENTITY_SPEED = {
+    'level1Bg0': 0,
+    'level1Bg1': 1,
+    'level1Bg2': 2,
+    'level1Bg3': 3,
+    'level1Bg4': 4
+}
