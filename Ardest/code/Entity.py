@@ -1,21 +1,15 @@
-#!/usr/bin/python
-#-*- coding: utf-8 -*-
+import pygame
+from abc import ABC, abstractmethod
+from pygame import Surface
 
-class Entity:
-    def __init__(self):
-        self.name = None
-        self.surf = None
-        self.rect = None
 
-    def name(self, ):
+class Entity(ABC):
+    def __init__(self, name: str, position: tuple):
+        self.name = name
+        self.surf: Surface = pygame.image.load('./assets/level_img/' + name + '.png').convert_alpha()
+        self.rect = self.surf.get_rect(left=position[0], top=position[1])
+        self.speed = 0
+
+    @abstractmethod
+    def move(self):
         pass
-
-    def rect(self, ):
-        pass
-
-    def move(self, ):
-        pass
-
-    def Operation2(self, ):
-        pass
-
