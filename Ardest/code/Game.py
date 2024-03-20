@@ -20,7 +20,7 @@ class Game:
             menu = Menu(self.window)
             op_menu = menu.run()
             if op_menu in [MENU_OPTION_LIST[0], MENU_OPTION_LIST[1], MENU_OPTION_LIST[2]]:
-                level = Level(self.window, 'Level 1', op_menu)
+                level = Level(self.window, 'level1', op_menu)
                 level.run()
             else:
                 pygame.quit()

@@ -14,12 +14,12 @@ from Ardest.code.Const import COLOR_ORANGE, MENU_OPTION_LIST, COLOR_WHITE, COLOR
 class Menu:
     def __init__(self, window):
         self.window: Surface = window
-        self.surf = pygame.image.load('./assets/MenuBG.png')
+        self.surf = pygame.image.load('./assets/MenuBG.png').convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self):
-        # pygame.mixer_music.load('./assets/Menu.wav')
-        # pygame.mixer_music.play(-1)
+        pygame.mixer_music.load('./assets/Menu.wav')
+        pygame.mixer_music.play(-1)
 
         #Variável para armazenar o valor da opção selecionada no menu principal
         menu_option = 0
